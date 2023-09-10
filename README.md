@@ -8,6 +8,8 @@ This janky bot does the following:
 
 * Listens to commands on a server for `tv` commands
 * Controls an instance of `mpv` via these commands
+* The instance of `mpv` is used by Discord to stream the video
+* A desktop audio loopback is needed to get the `mpv` sound to Discord. `virtualmic` is used for that.
 * Downloads M3U and XMLTV files from your IPTV provider
 * Stored the data in a MySQL database
 * Searches and switches channels by looking stuff up in the database and controlling `mpv`

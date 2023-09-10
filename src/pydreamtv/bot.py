@@ -22,6 +22,7 @@ TOKEN = os.getenv("TOKEN")
 GUILD = os.getenv("GUILD")
 PLAYLIST = os.getenv("PLAYLIST")
 XMLTV = os.getenv("XMLTV")
+FALLBACK = os.getenv("FALLBACK")
 
 
 current_overlay = None
@@ -60,7 +61,7 @@ def logit(loglevel, component, message):
         message.startswith("http: Stream ends prematurely")
     ):
         # Capture and play Dave
-        play_with_description("http://neczmabfa.to:80/play/Mb_As84PELDIm3i5VJ_8nJiRif9MkF8lvTpXiBjQ5TM5sbhQXiNr8gHdV0FOxn6-/ts", "Default Dave, something went wrong...")
+        play_with_description(FALLBACK, "Default channel, something went wrong...")
 
     if loglevel in ["error", "fatal"]:
         click.echo(f"{loglevel} | {component} | {message}")

@@ -45,3 +45,11 @@ With all the stuff above installed, do the following:
 10. Type `tv random` in chat
 11. When the `mpv` window appears, stream the window to the voice chat
 12. Swap the desktop audio to the virtual mic output
+
+### Limitations
+
+* Discord streaming audio is terrible. It uses the Opus codec and the audio quality is controlled by server boosts. Level 1 boosts can get 128Kbps quality
+* There is a fallback channel which is used when a channel is offline, just pick a channel URL from the playlist file, preferrably one that is reliable
+* The bot attempts to keep the `mpv` window open as much as possible so that Discord doesn't lose the window handle, but it can be hit and miss sometimes
+* This script assumes that the categories from the channel playlists contain some country codes at the start
+* The playlist imported does make some assumptions about the channel metadata format. YMMV.

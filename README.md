@@ -25,19 +25,21 @@ This janky bot does the following:
     * A URL for the channel listings, preferrably as an M3U file
     * A URL for the schedule, preferrably as an XMLTV file
 * `virtualmic` installed and working to provide desktop audio to the stream
+* PDM installed to manage dependencies
 
 ### How to do this
 
 With all the stuff above installed, do the following:
 
-1. Rename `.env.example` to `.env` in the `src` directory
-2. Fill out the `.env` file with the necessary details
-3. Create a database in MySQL called `pydreamtv`
-4. Use the SQL scripts to create the necessary tables
-5. Change to the `src` directory
-6. Run `pydreamtv/bot.py`
-7. Wait for the channel and programme databases to fill
-8. Go to a voice channel in Discord
-9. Type `tv random` in chat
-10. When the `mpv` window appears, stream the window to the voice chat
-11. Swap the desktop audio to the virtual mic output
+1. Run `pdm install` to install the virtual environment and dependencies
+2. Rename `.env.example` to `.env` in the `src` directory
+3. Fill out the `.env` file with the necessary details
+4. Create a database in MySQL called `pydreamtv`
+5. Use the SQL scripts to create the necessary tables
+6. Change to the `src` directory
+7. Run `pydreamtv/bot.py`
+8. Wait for the channel and programme databases to fill
+9. Go to a voice channel in Discord
+10. Type `tv random` in chat
+11. When the `mpv` window appears, stream the window to the voice chat
+12. Swap the desktop audio to the virtual mic output
